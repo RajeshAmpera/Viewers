@@ -20,7 +20,7 @@ function ViewerLayout({
   // From Modes
   viewports,
   ViewportGridComp,
-  leftPanelClosed = false,
+  leftPanelClosed = true,
   rightPanelClosed = false,
   leftPanelResizable = false,
   rightPanelResizable = false,
@@ -36,7 +36,7 @@ function ViewerLayout({
   );
 
   const [hasRightPanels, setHasRightPanels] = useState(hasPanels('right'));
-  const [hasLeftPanels, setHasLeftPanels] = useState(hasPanels('left'));
+  const [hasLeftPanels, setHasLeftPanels] = useState(false);
   const [leftPanelClosedState, setLeftPanelClosed] = useState(leftPanelClosed);
   const [rightPanelClosedState, setRightPanelClosed] = useState(rightPanelClosed);
 
@@ -123,11 +123,11 @@ function ViewerLayout({
     const { unsubscribe } = panelService.subscribe(
       panelService.EVENTS.PANELS_CHANGED,
       ({ options }) => {
-        setHasLeftPanels(hasPanels('left'));
+        // setHasLeftPanels(hasPanels('left'));
         setHasRightPanels(hasPanels('right'));
-        if (options?.leftPanelClosed !== undefined) {
-          setLeftPanelClosed(options.leftPanelClosed);
-        }
+        // if (options?.leftPanelClosed !== undefined) {
+        //   setLeftPanelClosed(options.leftPanelClosed);
+        // }
         if (options?.rightPanelClosed !== undefined) {
           setRightPanelClosed(options.rightPanelClosed);
         }
@@ -210,7 +210,7 @@ function ViewerLayout({
         </React.Fragment>
       </div>
       <Onboarding tours={customizationService.getCustomization('ohif.tours')} />
-      <InvestigationalUseDialog dialogConfiguration={appConfig?.investigationalUseDialog} />
+      {/* <InvestigationalUseDialog dialogConfiguration={appConfig?.investigationalUseDialog} /> */}
     </div>
   );
 }

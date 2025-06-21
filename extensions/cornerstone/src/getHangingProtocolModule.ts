@@ -10,16 +10,16 @@ import { frameView } from './hps/frameView';
 function getHangingProtocolModule() {
   return [
     {
+      name: fourUp.id,
+      protocol: fourUp,
+    },
+    {
       name: mpr.id,
       protocol: mpr,
     },
     {
       name: mprAnd3DVolumeViewport.id,
       protocol: mprAnd3DVolumeViewport,
-    },
-    {
-      name: fourUp.id,
-      protocol: fourUp,
     },
     {
       name: main3D.id,
