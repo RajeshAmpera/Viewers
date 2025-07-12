@@ -68,6 +68,13 @@ export default {
   },
   'layoutSelector.commonPresets': [
     {
+      icon: 'layout-common-2x2',
+      commandOptions: {
+        numRows: 2,
+        numCols: 2,
+      },
+    },
+    {
       icon: 'layout-common-1x1',
       commandOptions: {
         numRows: 1,
@@ -78,13 +85,6 @@ export default {
       icon: 'layout-common-1x2',
       commandOptions: {
         numRows: 1,
-        numCols: 2,
-      },
-    },
-    {
-      icon: 'layout-common-2x2',
-      commandOptions: {
-        numRows: 2,
         numCols: 2,
       },
     },
