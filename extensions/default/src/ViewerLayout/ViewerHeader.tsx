@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Button, Header, Icons, useModal } from '@ohif/ui-next';
 import { useSystem } from '@ohif/core';
 import { Toolbar } from '../Toolbar/Toolbar';
-import HeaderPatientInfo from './HeaderPatientInfo';
-import { PatientInfoVisibility } from './HeaderPatientInfo/HeaderPatientInfo';
+// import HeaderPatientInfo from './HeaderPatientInfo';
+// import { PatientInfoVisibility } from './HeaderPatientInfo/HeaderPatientInfo';
 import { preserveQueryParameters } from '@ohif/app';
 
 function ViewerHeader({ appConfig }: withAppTypes<{ appConfig: AppTypes.Config }>) {
@@ -86,36 +86,36 @@ function ViewerHeader({ appConfig }: withAppTypes<{ appConfig: AppTypes.Config }
           buttonSection="secondary"
         />
       }
-      PatientInfo={
-        appConfig.showPatientInfo !== PatientInfoVisibility.DISABLED && (
-          <HeaderPatientInfo
-            servicesManager={servicesManager}
-            appConfig={appConfig}
-          />
-        )
-      }
-      UndoRedo={
-        <div className="text-primary flex cursor-pointer items-center">
-          <Button
-            variant="ghost"
-            className="hover:bg-primary-dark"
-            onClick={() => {
-              commandsManager.run('undo');
-            }}
-          >
-            <Icons.Undo className="" />
-          </Button>
-          <Button
-            variant="ghost"
-            className="hover:bg-primary-dark"
-            onClick={() => {
-              commandsManager.run('redo');
-            }}
-          >
-            <Icons.Redo className="" />
-          </Button>
-        </div>
-      }
+      // PatientInfo={
+      //   appConfig.showPatientInfo !== PatientInfoVisibility.DISABLED && (
+      //     <HeaderPatientInfo
+      //       servicesManager={servicesManager}
+      //       appConfig={appConfig}
+      //     />
+      //   )
+      // }
+      // UndoRedo={
+      //   <div className="text-primary flex cursor-pointer items-center">
+      //     <Button
+      //       variant="ghost"
+      //       className="hover:bg-primary-dark"
+      //       onClick={() => {
+      //         commandsManager.run('undo');
+      //       }}
+      //     >
+      //       <Icons.Undo className="" />
+      //     </Button>
+      //     <Button
+      //       variant="ghost"
+      //       className="hover:bg-primary-dark"
+      //       onClick={() => {
+      //         commandsManager.run('redo');
+      //       }}
+      //     >
+      //       <Icons.Redo className="" />
+      //     </Button>
+      //   </div>
+      // }
     >
       <div className="relative flex justify-center gap-[4px]">
         <Toolbar servicesManager={servicesManager} />

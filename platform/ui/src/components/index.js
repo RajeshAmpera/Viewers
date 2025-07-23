@@ -91,7 +91,7 @@ import HeaderPatientInfo from './HeaderPatientInfo';
 import LegacySplitButton from './LegacySplitButton';
 import { ToolSettings } from './AdvancedToolbox';
 import { Toolbox } from './Toolbox';
-import InvestigationalUseDialog from './InvestigationalUseDialog';
+// import InvestigationalUseDialog from './InvestigationalUseDialog';
 import MeasurementItem from './MeasurementTable/MeasurementItem';
 import LayoutPreset from './LayoutPreset';
 import ActionButtons from './ActionButtons';
@@ -198,6 +198,6 @@ export {
   LegacySplitButton,
   ToolSettings,
   Toolbox,
-  InvestigationalUseDialog,
+  // InvestigationalUseDialog,
   StudyBrowserSort,
 };

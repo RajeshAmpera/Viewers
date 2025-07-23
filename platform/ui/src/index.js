@@ -130,7 +130,7 @@ export {
   HeaderPatientInfo,
   ToolSettings,
   Toolbox,
-  InvestigationalUseDialog,
+  // InvestigationalUseDialog,
   LayoutPreset,
   StudyBrowserSort,
 } from './components';

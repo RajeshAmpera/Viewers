@@ -1,5 +1,6 @@
 import i18n from '@ohif/i18n';
 import { ViewportDialog } from '@ohif/ui-next';
+// Removed to avoid showing the dailog whether you want to track measurements or not
 
 const beginTrackingMessage = i18n.t('MeasurementTable:Track measurements for this series?');
 const trackNewSeriesMessage = i18n.t('Do you want to add this measurement to the existing report?');

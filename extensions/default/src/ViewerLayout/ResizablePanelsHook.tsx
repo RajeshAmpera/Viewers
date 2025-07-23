@@ -26,7 +26,7 @@ const setMinMaxWidth = (elem, width?) => {
 
 const useResizablePanels = (
   leftPanelClosed,
-  setLeftPanelClosed,
+  // setLeftPanelClosed,
   rightPanelClosed,
   setRightPanelClosed,
   hasLeftPanels,
@@ -193,18 +193,18 @@ const useResizablePanels = (
     [leftPanelExpandedWidth, rightPanelExpandedWidth]
   );
 
-  const onLeftPanelClose = useCallback(() => {
-    setLeftPanelClosed(true);
-    setMinMaxWidth(resizableLeftPanelElemRef.current);
-    resizableLeftPanelAPIRef?.current?.collapse();
-  }, [setLeftPanelClosed]);
+  // const onLeftPanelClose = useCallback(() => {
+  //   setLeftPanelClosed(true);
+  //   setMinMaxWidth(resizableLeftPanelElemRef.current);
+  //   resizableLeftPanelAPIRef?.current?.collapse();
+  // }, [setLeftPanelClosed]);
 
-  const onLeftPanelOpen = useCallback(() => {
-    resizableLeftPanelAPIRef?.current?.expand(
-      getPercentageSize(panelGroupDefinition.left.initialExpandedOffsetWidth)
-    );
-    setLeftPanelClosed(false);
-  }, [setLeftPanelClosed]);
+  // const onLeftPanelOpen = useCallback(() => {
+  //   resizableLeftPanelAPIRef?.current?.expand(
+  //     getPercentageSize(panelGroupDefinition.left.initialExpandedOffsetWidth)
+  //   );
+  //   setLeftPanelClosed(false);
+  // }, [setLeftPanelClosed]);
 
   const onLeftPanelResize = useCallback(size => {
     if (!resizablePanelGroupElemRef?.current || resizableLeftPanelAPIRef.current?.isCollapsed()) {
@@ -279,8 +279,8 @@ const useResizablePanels = (
       collapsedInsideBorderSize: panelGroupDefinition.shared.collapsedInsideBorderSize,
       collapsedOutsideBorderSize: panelGroupDefinition.shared.collapsedOutsideBorderSize,
       expandedInsideBorderSize: panelGroupDefinition.shared.expandedInsideBorderSize,
-      onClose: onLeftPanelClose,
-      onOpen: onLeftPanelOpen,
+      // onClose: onLeftPanelClose,
+      // onOpen: onLeftPanelOpen,
     },
     {
       expandedWidth: rightPanelExpandedWidth,
@@ -298,8 +298,8 @@ const useResizablePanels = (
       onResize: onLeftPanelResize,
       collapsible: true,
       collapsedSize: leftResizablePanelCollapsedSize,
-      onCollapse: () => setLeftPanelClosed(true),
-      onExpand: () => setLeftPanelClosed(false),
+      // onCollapse: () => setLeftPanelClosed(true),
+      // onExpand: () => setLeftPanelClosed(false),
       ref: resizableLeftPanelAPIRef,
       order: 0,
       id: panelGroupDefinition.left.panelId,

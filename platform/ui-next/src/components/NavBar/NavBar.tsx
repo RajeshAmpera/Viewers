@@ -17,7 +17,8 @@ const NavBar = ({
   return (
     <div
       className={classnames(
-        'bg-secondary-dark z-20 border-black px-1',
+        'bg-dark z-20 border-black px-1', // To change the background color to dark and add a border
+        // 'bg-secondary-dark' this is the original class of the NavBar
         isSticky && stickyClasses,
         !isSticky && notStickyClasses,
         className

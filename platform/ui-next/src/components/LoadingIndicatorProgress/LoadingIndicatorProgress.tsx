@@ -17,7 +17,8 @@ function LoadingIndicatorProgress({ className, textBlock, progress }) {
         className
       )}
     >
-      <Icons.LoadingOHIFMark className="h-12 w-12 text-white" />
+
+      {/* <Icons.LoadingOHIFMark className="h-12 w-12 text-white" />  //This line is commented out to avoid using the OHIF mark icon */}
       <div className="w-48">
         <ProgressLoadingBar progress={progress} />
       </div>
