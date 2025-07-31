@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Icons } from '@ohif/ui-next';
 import { PatientInfo } from './PatientInfo';
-
+// Assigning patient details here according to me
 /**
  * This is the modern Viewport Action Bar, showing patient info, series date,
  * series description, and optional next/prev arrows if there's enough screen width.

@@ -166,7 +166,7 @@ const ViewportActionBar = ({
     </div>
   );
 };
-
+// here we need to modify  patient demographics according to our data
 ViewportActionBar.propTypes = {
   onArrowsClick: PropTypes.func.isRequired,
   studyData: PropTypes.shape({
