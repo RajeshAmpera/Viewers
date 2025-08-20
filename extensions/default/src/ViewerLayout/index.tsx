@@ -21,7 +21,7 @@ function ViewerLayout({
   viewports,
   ViewportGridComp,
   leftPanelClosed = true,
-  rightPanelClosed = true,
+  rightPanelClosed = false,
   leftPanelResizable = false,
   rightPanelResizable = false,
 }: withAppTypes): React.FunctionComponent {
@@ -124,13 +124,13 @@ function ViewerLayout({
       panelService.EVENTS.PANELS_CHANGED,
       ({ options }) => {
         // setHasLeftPanels(hasPanels('left'));
-        // setHasRightPanels(hasPanels('right'));
+        setHasRightPanels(hasPanels('right'));
         // if (options?.leftPanelClosed !== undefined) {
         //   setLeftPanelClosed(options.leftPanelClosed);
         // }
-        // if (options?.rightPanelClosed !== undefined) {
-        //   setRightPanelClosed(options.rightPanelClosed);
-        // }
+        if (options?.rightPanelClosed !== undefined) {
+          setRightPanelClosed(options.rightPanelClosed);
+        }
       }
     );
 
@@ -189,7 +189,7 @@ function ViewerLayout({
                 </div>
               </div>
             </ResizablePanel>
-            {/* {hasRightPanels ? (
+            {hasRightPanels ? (
               <>
                 <ResizableHandle
                   onDragging={onHandleDragging}
@@ -205,7 +205,7 @@ function ViewerLayout({
                   />
                 </ResizablePanel>
               </>
-            ) : null} */}
+            ) : null}
           </ResizablePanelGroup>
         </React.Fragment>
       </div>
